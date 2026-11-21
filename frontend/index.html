@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FaultLens | System Intelligence</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #101B2D;
+      color: #E4D8C5;
+      font-family: Arial, sans-serif;
+      padding: 30px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 35px;
+    }
+
+    h1 { color: #E4C58A; font-size: 28px; }
+    header p { color: #9BAEC3; margin-top: 6px; }
+
+    .status {
+      color: #86C7A0;
+      border: 1px solid #386B55;
+      padding: 10px 16px;
+      border-radius: 20px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(190px,1fr));
+      gap: 18px;
+      margin-bottom: 30px;
+    }
+
+    .card, .panel {
+      background: #192A40;
+      border: 1px solid #30445C;
+      border-radius: 14px;
+      padding: 22px;
+    }
+
+    .card p { color: #9BAEC3; font-size: 13px; }
+    .card h2 { font-size: 32px; margin-top: 12px; }
+
+    .panel { margin-bottom: 25px; }
+    .panel h2 { color: #E4C58A; margin-bottom: 20px; }
+
+    .service {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 0;
+      border-bottom: 1px solid #30445C;
+    }
+
+    .healthy { color: #86C7A0; }
+    .critical { color: #F08B91; }
+
+    button {
+      background: #243B55;
+      color: #E4D8C5;
+      border: 1px solid #52718E;
+      border-radius: 7px;
+      padding: 10px 14px;
+      cursor: pointer;
+      margin: 5px;
+    }
+
+    button:hover { background: #365675; }
+
+    #message { color: #E4C58A; margin-top: 15px; }
+
+    @media(max-width:600px) {
+      body { padding: 16px; }
+      header { align-items: flex-start; gap: 15px; flex-direction: column; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div>
+      <h1>FAULTLENS</h1>
+      <p>Distributed System Intelligence Platform</p>
+    </div>
+    <div class="status">● Monitoring Platform</div>
+  </header>
+
+  <section class="cards">
+    <div class="card">
+      <p>MONITORED SERVICES</p>
+      <h2 id="total">--</h2>
+    </div>
+    <div class="card">
+      <p>HEALTHY SERVICES</p>
+      <h2 id="healthy">--</h2>
+    </div>
+    <div class="card">
+      <p>ACTIVE INCIDENTS</p>
+      <h2 id="incidentCount">--</h2>
+    </div>
+    <div class="card">
+      <p>CRITICAL SERVICES</p>
+      <h2 id="critical">--</h2>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2>Service Intelligence</h2>
+    <div id="services">Loading services...</div>
+  </section>
+<section class="panel">
+  <h2>Service Dependency Intelligence</h2>
+  <p style="color:#9BAEC3;margin-bottom:20px;">
+    Microservice communication and dependency relationships
+  </p>
+  <div id="dependencyGraph"></div>
+</section>
+
+<section class="panel">
+  <h2>Root Cause Analysis</h2>
+  <div id="rootCause">Loading analysis...</div>
+</section>
+
+<section class="panel">
+  <h2>Reliability Analytics</h2>
+  <div class="cards" id="analytics">
+    Loading analytics...
+  </div>
+</section>
+   <section class="panel">
+    <h2>Incident Management</h2>
+    <div id="incidents">No incidents loaded.</div>
+    <p id="message"></p>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
