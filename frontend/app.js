@@ -1,5 +1,5 @@
 
-const API = "http://127.0.0.1:8000";
+const API = "https://faultlens-api-ugzo.onrender.com";
 
 // Load dashboard data
 async function loadDashboard() {
