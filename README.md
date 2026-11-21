@@ -100,3 +100,10 @@ GitHub: https://github.com/Mullaivarman29
 ---
 
 *Built to explore software engineering, distributed systems, and reliability engineering.*
+## 🚀 Live Demo
+
+**Explore FaultLens:** https://faultlens-frontend.onrender.com
+
+**Backend API:** https://faultlens-api-ugzo.onrender.com
+
+**Source Code:** https://github.com/Mullaivarman29/FaultLens
